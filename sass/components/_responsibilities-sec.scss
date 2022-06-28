@@ -1,0 +1,55 @@
+/*третья секция responsibilities*/
+.responsibilities {
+  padding-top: 0;
+  padding-bottom: 94px;
+
+  @media screen and (max-width:1199px) {
+    display: none;
+  }
+}
+
+.responsibilities-name {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+.responsibilities-list {
+  display: flex;
+}
+
+.responsibilities-list {
+  &__image {
+    display: block;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primary-background;
+    border: transparent;
+    background-color: rgba(47, 48, 58, 0.8);
+    transform: translateY(-100%);
+    align-items: center;
+    justify-content: center;
+  }
+}

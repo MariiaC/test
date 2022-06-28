@@ -1,0 +1,142 @@
+.menu-button {
+    display: inline-flex;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+
+    &__cross,
+    &__burger {
+        padding: 12px 8px;
+    }
+
+    &__cross {
+        display: none;
+    }
+
+    &.is-open &__cross {
+        display: block;
+    }
+
+    &__burger {
+        display: block;
+    }
+
+    &.is-open &__burger {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu {
+    z-index: 1;
+    padding: 48px 40px;
+    background-color: $primary-background;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        &.is-open {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    @media screen and (max-width: 767px) {
+        display: block;
+        margin-right: auto;
+    }
+
+    &__item {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        color: $primary-text;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        transition: color 250ms $timng-function;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $accent;
+        }
+
+        &--current,
+        &--accent {
+            color: $accent;
+        }
+    }
+}
+
+.mobile-contacts {
+    display: block;
+    margin-bottom: 64px;
+    margin-top: auto;
+
+    &__list:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    &__item {
+        color: $secondary-text;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+
+        transition: color 250ms $timng-function;
+
+        &--accent {
+            color: $accent;
+            font-size: 34px;
+            line-height: 1.18;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $accent;
+        }
+    }
+}
+
+.mobile-socials {
+    display: flex;
+    align-items: center;
+
+    &__list:not(:last-child) {
+        margin-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &__item {
+        color: $accent;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        margin-right: 10px;
+    }
+}
